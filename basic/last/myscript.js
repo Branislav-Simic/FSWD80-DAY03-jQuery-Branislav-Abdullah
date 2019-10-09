@@ -1,0 +1,1 @@
+$('.notebook').css('background-color' , 'red');

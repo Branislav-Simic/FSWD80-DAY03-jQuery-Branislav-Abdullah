@@ -43,36 +43,39 @@
 	 <script>
               $(document).ready(function() {
 
+              	update();
+
               	// Bonus
 
                 $('#addBtn').on('click',function(){
                 	var todo=$('#td').val();
                 	$('#list').append('<li>'+todo+'</li>');
+                	update ();
 
 
-                	$('li').on('click', function() {
-                $(this).animate({
-                        opacity: 0.0,
-                        paddingLeft: '+=80'
-                    }, 3000, function() {
-                        $(this).remove();
-                    });
-                });
+                // 	$('li').on('click', function() {
+                // $(this).animate({
+                //         opacity: 0.0,
+                //         paddingLeft: '+=80'
+                //     }, 3000, function() {
+                //         $(this).remove();
+                //     });
+                // });
                 });
 
                 // Bonus end
+        });
 
-                $('li').on('click', function() {
+              		function update(){
+                    $('li').on('click', function() {
                 $(this).animate({
                         opacity: 0.0,
                         paddingLeft: '+=80'
                     }, 5000, function() {
                         $(this).remove();
-                    });
-                });
-
-
-        });
+                    })
+                })
+                }
 
               
      </script>
