@@ -51,6 +51,10 @@ div#moveme
 	/*cursor: default;*/
 }
 
+span{
+margin-left: 200px;
+}
+
 h1
 {
 	font-size: 1.6em;
