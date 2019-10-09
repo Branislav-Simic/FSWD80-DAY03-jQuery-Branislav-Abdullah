@@ -29,7 +29,11 @@
 		<button id="addBtn">Add</button>
 		
 	</div>
+	
+
+	<div>
 		
+	
 		<ul id="list">
 			<li>Cleaning the room</li>
 			<li>Read the Pre-Work</li>
@@ -37,42 +41,40 @@
 			<li>Code</li>
 			<li>Sleep</li>
 		</ul>
-	
+	</div>
 
 
 	 <script>
               $(document).ready(function() {
 
-              	// Bonus
-
-                $('#addBtn').on('click',function(){
-                	var todo=$('#td').val();
-                	$('#list').append('<li>'+todo+'</li>');
+              	update('li');
 
 
-                	$('li').on('click', function() {
-                $(this).animate({
-                        opacity: 0.0,
-                        paddingLeft: '+=80'
-                    }, 3000, function() {
-                        $(this).remove();
-                    });
+      
+
+                $('#addBtn').click(function(){
+                var todo=$('#td').val();
+                $('#list').append('<li>'+todo+'</li>');
+                update("li");
+
+
                 });
                 });
 
-                // Bonus end
 
-                $('li').on('click', function() {
-                $(this).animate({
+
+        function update(a) {
+
+        	$(a).click(function(){
+        		$(this).animate({
                         opacity: 0.0,
                         paddingLeft: '+=80'
                     }, 5000, function() {
                         $(this).remove();
                     });
-                });
-
-
-        });
+        	})
+                
+                }
 
               
      </script>
