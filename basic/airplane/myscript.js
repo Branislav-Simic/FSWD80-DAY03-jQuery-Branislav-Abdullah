@@ -11,10 +11,10 @@ $(document).mousemove(function(e) {
 myclick('.box');
 function myclick(a){
 $(a).on("click",function(){
-	$(this).fadeOut()
-
-
+	$(this).fadeOut().fadeIn()
 });
 };
+
+
 
 
