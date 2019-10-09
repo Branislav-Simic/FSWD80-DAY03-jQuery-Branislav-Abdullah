@@ -11,7 +11,7 @@ $(document).mousemove(function(e) {
 myclick('.box');
 function myclick(a){
 $(a).on("click",function(){
-	$(this).fadeOut().fadeIn()
+	$(this).fadeOut().fadeIn(6000)
 });
 };
 
