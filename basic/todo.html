@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>jQuery animation</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+	<style>
+		/* * { padding: 0; margin: 0; } */
+		body { font-family: sans-serif; font-size: 100%; margin: 10px; color: #222; background-color: #eee; }
+
+		li{
+			list-style: none;
+			background-color: yellow;
+			border: 1px solid white;
+			margin: 3px;
+			border-width: 20px;
+		}
+		
+	</style>
+</head>
+<body>
+
+	<h1>5 TODO</h1>
+
+	<div id="input">
+		<input type="text" placeholder="To Do" id="td">
+		<button id="addBtn">Add</button>
+		
+	</div>
+		
+		<ul id="list">
+			<li>Cleaning the room</li>
+			<li>Read the Pre-Work</li>
+			<li>Cook</li>
+			<li>Code</li>
+			<li>Sleep</li>
+		</ul>
+	
+
+
+	 <script>
+              $(document).ready(function() {
+
+              	// Bonus
+
+                $('#addBtn').on('click',function(){
+                	var todo=$('#td').val();
+                	$('#list').append('<li>'+todo+'</li>');
+                	$('li').on('click', function() {
+                $(this).animate({
+                        opacity: 0.0,
+                        paddingLeft: '+=80'
+                    }, 3000, function() {
+                        $(this).remove();
+                    });
+                });
+                });
+
+                // Bonus end
+
+                $('li').on('click', function() {
+                $(this).animate({
+                        opacity: 0.0,
+                        paddingLeft: '+=80'
+                    }, 5000, function() {
+                        $(this).remove();
+                    });
+                });
+
+
+        });
+
+              
+     </script>
+
+</body>
+</html>
