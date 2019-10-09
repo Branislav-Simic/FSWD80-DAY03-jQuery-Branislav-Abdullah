@@ -48,6 +48,8 @@
                 $('#addBtn').on('click',function(){
                 	var todo=$('#td').val();
                 	$('#list').append('<li>'+todo+'</li>');
+
+
                 	$('li').on('click', function() {
                 $(this).animate({
                         opacity: 0.0,
